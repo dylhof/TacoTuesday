@@ -8,7 +8,7 @@ class App extends Component {
   constructor () {
     super()
     this.state = {
-      baseLayers: []
+      randoTaco: {}
     }
   }
 
@@ -16,23 +16,25 @@ class App extends Component {
     this.fetchTacos()
   }
 
-  baseLayers = () => {
-
-    const jsxItems = this.state.baseLayers.map(baseLayer => {
-
-      return(<div key={baseLayer.slug}>
-        <h3>{baseLayer.name}</h3>
-        <p>{baseLayer.recipe}</p>
+  randoTaco = () => {
+    const randoTacoKeys = Object.keys(this.state.randoTaco)
+    const jsxItems = randoTacoKeys.map(tacoLayer => {
+    const {randoTaco} = this.state
+      return(<div key={randoTaco[tacoLayer].slug}>
+        <h3>{randoTaco[tacoLayer].name}</h3>
+        <p>{randoTaco[tacoLayer].recipe}</p>
       </div>)
     })
     return jsxItems
   }
+
   fetchTacos = async () => {
     const proxyURL = 'https://cors-anywhere.herokuapp.com/'
-    const targetURL = 'http://taco-randomizer.herokuapp.com/base_layers'
+    const targetURL = 'http://taco-randomizer.herokuapp.com/random'
     const response = await fetch(proxyURL + targetURL)
-    const baseLayers = await response.json()
-    this.setState({ baseLayers })
+    const randoTaco = await response.json()
+    console.log(randoTaco)
+    this.setState({ randoTaco })
     
   }
 
@@ -49,7 +51,7 @@ class App extends Component {
           <Route path='/explore/:tacoPart' render={this.findTacoPart}/>
           <Route render={ErrorDisplay}/>
         </Switch>
-        {this.baseLayers()}
+        {this.randoTaco()}
       </div>
     );
   }
