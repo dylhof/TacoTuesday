@@ -1,7 +1,7 @@
 import loadingReducer from '../loadingReducer';
 
 describe('loadingReducer', () => {
-  it('should should return the initial state', () => {
+  it('should return the initial state', () => {
     //setup
     const expected = false;
     //execution
