@@ -8,6 +8,7 @@ export const fetchRandoTaco = () => {
     try {
       dispatch(setLoading(true));
       const randoTaco = await fetchCall(proxyURL + tacoURL);
+      console.log('fromfetchrandoTaco', randoTaco)
       dispatch(setLoading(false));
       dispatch(setRandoTaco(randoTaco));
     } catch (error) {
