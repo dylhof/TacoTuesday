@@ -5,14 +5,18 @@ import {ErrorDisplay} from '../../components/ErrorDisplay/ErrorDisplay'
 import { withRouter, Switch, Route } from 'react-router-dom';
 import {fetchRandoTaco} from '../../thunks/fetchRandoTaco';
 import { connect } from 'react-redux';
+import {fetchAllTacoParts} from '../../thunks/fetchAllTacoParts'
+// import('../../thunks/fetchAllTacoParts').then(fetchAllTacoParts => {fetchAllTacoParts.fetchAllTacoParts()})
+
 
 export class App extends Component {
   componentDidMount = () => {
     this.props.fetchRandoTaco()
+    this.props.fetchAllTacoParts()
   }
 
   findTacoPart = () => {
-    
+
   }
 
   render() {
@@ -31,7 +35,8 @@ export class App extends Component {
 }
 
 export const mapDispatchToProps = dispatch => ({
-  fetchRandoTaco: () => dispatch(fetchRandoTaco())
+  fetchRandoTaco: () => dispatch(fetchRandoTaco()),
+  fetchAllTacoParts: () => dispatch(fetchAllTacoParts())
 })
 
 export default withRouter(
