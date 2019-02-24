@@ -17,11 +17,10 @@ const styles = {
     padding: '3px',
     borderRadius: '5px'
   },
-}
+};
 
 export const RecipeCard = ({ tacoRecipe, classes }) => {
-  console.log(tacoRecipe)
-  const splitRecipe = tacoRecipe.recipe.split('\n')
+  const splitRecipe = tacoRecipe.recipe.split('\n');
   const jsxRecipeItems = splitRecipe.map(step => {
     if (!step.includes('=')) {
       return (
@@ -31,7 +30,7 @@ export const RecipeCard = ({ tacoRecipe, classes }) => {
           </ListItemText>
         </ListItem>)
     }
-  })
+  });
   return (
     <Card className={classes.card}>
       <h3>{tacoRecipe.name}</h3>
@@ -39,7 +38,7 @@ export const RecipeCard = ({ tacoRecipe, classes }) => {
         {jsxRecipeItems}
       </List>
     </Card>
-  )
-}
+  );
+};
 
-export default withStyles(styles)(RecipeCard)
+export default withStyles(styles)(RecipeCard);

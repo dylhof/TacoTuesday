@@ -1,6 +1,6 @@
 import React from 'react';
-import {shallow} from 'enzyme';
-import {RecipeCard} from './RecipeCard';
+import { shallow } from 'enzyme';
+import { RecipeCard } from './RecipeCard';
 
 describe('RecipeCard', () => {
   let wrapper;
@@ -14,9 +14,9 @@ describe('RecipeCard', () => {
     //setup
     wrapper = shallow(
       <RecipeCard 
-      tacoRecipe={mockRecipe}
-      classes={mockClasses}/>)
+        tacoRecipe={mockRecipe}
+        classes={mockClasses}/>)
     //expectation
     expect(wrapper).toMatchSnapshot()
-  })
-})
+  });
+});
