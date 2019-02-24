@@ -1,5 +1,5 @@
 import React from 'react';
-import {Drawer, List, ListItem} from '@material-ui/core';
+import {Drawer, List, ListItem, ListSubheader, Typography} from '@material-ui/core';
 import { Link } from 'react-router-dom'
 
 const Menu = (props) => {
@@ -7,19 +7,20 @@ const Menu = (props) => {
   return (
     <Drawer open={props.showMenu} onClose={props.toggleShowMenu}>
       <div
-      tabIndex={0}
       role="button"
       onClick={props.toggleShowMenu}
       onKeyDown={props.toggleShowMenu}>
 
-        <h2>Explore</h2>
+          <Link to='/'><Typography variant='display2'>Taco Home</Typography></Link>
           <List>
-            <ListItem><Link to='/explore/base-layers'>Base-Layers</Link></ListItem>
+            <ListSubheader>Explore</ListSubheader>
+            <ListItem><Link to='/explore/baseLayers'>Base-Layers</Link></ListItem>
             <ListItem><Link to='/explore/mixins'>Mixins</Link></ListItem>
             <ListItem><Link to='/explore/condiments'>Condiments</Link></ListItem>
             <ListItem><Link to='/explore/seasonings'>Seasonings</Link></ListItem>
             <ListItem><Link to='/explore/shells'>Shells</Link></ListItem>
           </List>
+          <Link to='/build_a_taco'><Typography variant='display2'>Build A Taco</Typography></Link>
       </div>
     </Drawer>
   )
