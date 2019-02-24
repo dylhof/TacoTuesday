@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeCard should match the snapshot 1`] = `
+<WithStyles(Card)
+  className={Object {}}
+>
+  <h3>
+    yummyTacos
+  </h3>
+  <WithStyles(List)
+    className={Object {}}
+    dense={true}
+  >
+    <WithStyles(ListItem)
+      key="c088dedd-3834-4bef-ac76-219016891e46"
+    >
+      <WithStyles(ListItemText)>
+        lots of steps 
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+    <WithStyles(ListItem)
+      key="3a3377c8-dfe8-4713-97bb-e04f4e70e970"
+    >
+      <WithStyles(ListItemText)>
+         another step
+      </WithStyles(ListItemText)>
+    </WithStyles(ListItem)>
+  </WithStyles(List)>
+</WithStyles(Card)>
+`;
