@@ -15,7 +15,7 @@ export class Header extends Component {
 
   render() {
     return (
-      < AppBar>
+      < AppBar position='sticky'>
       {!this.state.showMenu && 
       <IconButton onClick={this.toggleShowMenu} >
           <ArrowForwardIos />
