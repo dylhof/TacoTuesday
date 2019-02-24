@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Card, List, ListItem, ListItemText } from '@material-ui/core'
+import { Grid, Card, List, ListItem, ListItemText, Typography } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 import uuid from 'uuid/v4';
 import {Link} from 'react-router-dom';
+import { fetchRandoTaco } from '../../thunks/fetchRandoTaco';
 
 const styles = {
   card: {
@@ -58,7 +59,14 @@ export class Home extends Component {
 
   render() {
     return (
-      <Grid container >{this.mapRandoTaco()}</Grid >
+      <Grid container >
+        {this.mapRandoTaco()}
+        <Grid item xs={12} sm={6} md={4} lg={2} >
+          <Card className={this.props.classes.card} onClick={this.props.fetchRandoTaco}> 
+            <Typography>Click here To get a new Rando Taco!</Typography>
+          </Card>
+        </Grid>
+      </Grid >
     )
   }
 }
@@ -67,4 +75,8 @@ export const mapStateToProps = state => ({
   randoTaco: state.randoTaco
 })
 
-export default withStyles(styles)(connect(mapStateToProps)(Home))
+export const mapDispatchToProps = dispatch => ({
+  fetchRandoTaco: () => dispatch(fetchRandoTaco())
+})
+
+export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(Home))
