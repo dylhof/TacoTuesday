@@ -7,7 +7,8 @@ const styles = {
   card: {
     margin: '10px',
     padding: '10px',
-    opacity: '.8'
+    opacity: '.8',
+    minWidth: '300px'
   },
   list: {
     height: '200px',
