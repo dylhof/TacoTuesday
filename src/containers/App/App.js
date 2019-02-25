@@ -7,7 +7,8 @@ import {fetchRandoTaco} from '../../thunks/fetchRandoTaco';
 import { connect } from 'react-redux';
 import {fetchAllTacoParts} from '../../thunks/fetchAllTacoParts';
 import TacoPart from '../TacoPart/TacoPart';
-import BuildATaco from '../BuildATaco/BuildATaco'
+import BuildATaco from '../BuildATaco/BuildATaco';
+import RecipeCard from '../../components/RecipeCard/RecipeCard';
 // import('../../thunks/fetchAllTacoParts').then(fetchAllTacoParts => {fetchAllTacoParts.fetchAllTacoParts()})
 
 
@@ -25,6 +26,15 @@ export class App extends Component {
     )
   }
 
+  findTacoPartRecipe = ({ match }) => {
+    const { baseLayers, mixins, condiments, seasonings, shells } = this.props
+    const allRecipes = [...baseLayers, ...mixins, ...condiments, ...seasonings, ...shells]
+    const tacoPartRecipe = allRecipes.find(recipe => recipe.slug === match.params.tacoPartRecipe)
+    return (
+      <RecipeCard tacoRecipe={tacoPartRecipe} /> 
+    )
+  }
+
   render() {
     return (
       <div className="App">
@@ -33,6 +43,7 @@ export class App extends Component {
         <Route path='/' exact component={Home} />
           <Route path='/explore/:tacoPart' render={this.findTacoPart}/>
           <Route path='/build_a_taco' component={BuildATaco} />
+          <Route path='/:tacoPartRecipe' render={this.findTacoPartRecipe}/>
           <Route render={ErrorDisplay}/>
         </Switch>
         {this.props.error && <h2>{this.props.error}</h2>}
@@ -47,7 +58,12 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export const mapStateToProps = state => ({
-  error: state.error
+  error: state.error,
+  baseLayers: state.baseLayers,
+  mixins: state.mixins,
+  condiments: state.condiments,
+  seasonings: state.seasonings,
+  shells: state.shells
 })
 
 
