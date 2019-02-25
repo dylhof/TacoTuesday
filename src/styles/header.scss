@@ -1,13 +1,10 @@
 .header {
-  height: 150px;
-  display: flex;
-  justify-content: flext-start;
+  @include divFlex(start, flex-start, row);
+  height: 125px;
   background-color: $primary;
 
   h1 {
-    color: $text;
-    font-family: 'Coiny', cursive;
-    font-size: 38px;
+    @include text($title, 38px, start);
     margin: 20px 20px 0 0;
   }
 
