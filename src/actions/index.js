@@ -23,7 +23,7 @@ export const setError = error => ({
   error
 })
 
-export const setBaseLayers = baseLayers => ({
+export const setBase_layers = baseLayers => ({
   type: SET_BASE_LAYERS,
   baseLayers
 })
