@@ -1,45 +1,25 @@
 import React from 'react';
-import { Card, List, ListItem, ListItemText } from '@material-ui/core';
-import { withStyles } from '@material-ui/core/styles'
 import uuid from 'uuid/v4'
 
-const styles = {
-  card: {
-    margin: '10px',
-    padding: '10px',
-    opacity: '.8',
-    minWidth: '300px'
-  },
-  list: {
-    height: '200px',
-    overflow: 'scroll',
-    border: '2px solid black',
-    margin: '10px',
-    padding: '3px',
-    borderRadius: '5px'
-  },
-};
-
-export const RecipeCard = ({ tacoRecipe, classes }) => {
+export const RecipeCard = ({ tacoRecipe }) => {
   const splitRecipe = tacoRecipe.recipe.split('\n');
   const jsxRecipeItems = splitRecipe.map(step => {
     if (!step.includes('=')) {
       return (
-        <ListItem key={uuid()}>
-          <ListItemText>
-            {step}
-          </ListItemText>
-        </ListItem>)
+        <li key={uuid()}>
+          {step}
+        </li>
+      )
     }
   });
   return (
-    <Card className={classes.card}>
+    <div className='recipeCard'>
       <h3>{tacoRecipe.name}</h3>
-      <List dense={true} className={classes.list}>
+      <ul dense={true} className='recipeList'>
         {jsxRecipeItems}
-      </List>
-    </Card>
+      </ul>
+    </div>
   );
 };
 
-export default withStyles(styles)(RecipeCard);
+export default RecipeCard;
