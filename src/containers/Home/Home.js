@@ -27,7 +27,10 @@ export class Home extends Component {
       return (
         <Grid item key={randoTaco[tacoLayer].slug} xs={12} sm={6} md={4} lg={3}>
           <Link to={`/${randoTaco[tacoLayer].slug}`}>
-          <RecipeCard className={classes.card} tacoRecipe={randoTaco[tacoLayer]}/>
+          <RecipeCard 
+            styleName={'homeRecipes'}
+            listStyleName={'homeList'}
+            tacoRecipe={randoTaco[tacoLayer]}/>
           </Link>
         </Grid>)
     })
@@ -40,9 +43,9 @@ export class Home extends Component {
       <Grid container >
         {this.mapRandoTaco()}
         <Grid item xs={12} sm={6} md={4} lg={2} >
-          <Card className={classes.subCard} onClick={fetchRandoTaco}> 
-            <Typography>Click here To get a new Rando Taco!</Typography>
-          </Card>
+          <div className='recipeCard' onClick={fetchRandoTaco}> 
+          <h3>Click here To get a new Rando Taco!</h3>
+          </div>
         </Grid>
       </Grid >
     )
