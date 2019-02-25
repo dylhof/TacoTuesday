@@ -12,14 +12,14 @@ exports[`RecipeCard should match the snapshot 1`] = `
     dense={true}
   >
     <WithStyles(ListItem)
-      key="c088dedd-3834-4bef-ac76-219016891e46"
+      key="4fd51248-ed4f-4616-b947-0f92bf8fcf07"
     >
       <WithStyles(ListItemText)>
         lots of steps 
       </WithStyles(ListItemText)>
     </WithStyles(ListItem)>
     <WithStyles(ListItem)
-      key="3a3377c8-dfe8-4713-97bb-e04f4e70e970"
+      key="de2343b5-9653-4b6a-89ac-4217434bb792"
     >
       <WithStyles(ListItemText)>
          another step

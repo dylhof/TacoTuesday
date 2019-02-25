@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorDisplay should match the snapshot 1`] = `
+<div
+  className="notFoundMessage"
+>
+  <h2>
+     404 Taco not found
+  </h2>
+  <h3>
+     The path name:
+  </h3>
+  <h3>
+    http://localhost:/3000
+  </h3>
+  <h3>
+    does not contain any tacos
+  </h3>
+  <Link
+    replace={false}
+    to="/"
+  >
+    <WithStyles(Button)>
+      Return To Tacos
+    </WithStyles(Button)>
+  </Link>
+</div>
+`;
