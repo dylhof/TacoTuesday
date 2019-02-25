@@ -1,7 +1,7 @@
 import React from 'react';
 import uuid from 'uuid/v4'
 
-export const RecipeCard = ({ tacoRecipe }) => {
+export const RecipeCard = ({ tacoRecipe, styleName, listStyleName }) => {
   const splitRecipe = tacoRecipe.recipe.split('\n');
   const jsxRecipeItems = splitRecipe.map(step => {
     if (!step.includes('=')) {
@@ -13,11 +13,11 @@ export const RecipeCard = ({ tacoRecipe }) => {
     }
   });
   return (
-    <div className='recipeCard'>
+    <div className={`recipeCard ${styleName}`}>
       <h3>{tacoRecipe.name}</h3>
-      <ul dense={true} className='recipeList'>
-        {jsxRecipeItems}
-      </ul>
+        <ul dense={true} className={`recipeList ${listStyleName}`}>
+          {jsxRecipeItems}
+        </ul>
     </div>
   );
 };
