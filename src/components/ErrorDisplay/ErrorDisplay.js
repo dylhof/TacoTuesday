@@ -1,18 +1,18 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
-import {Typography, Button} from '@material-ui/core';
+import { Button } from '@material-ui/core';
 
 export const ErrorDisplay = (props) => {
   return(
-    <div>
-      <Typography variant='display3'> 404 Taco not found</Typography>
-      <Typography variant='display2'> The path name http://localhost:/3000{props.location.pathname} does not contain any tacos</Typography>
+    <div className='notFoundMessage'>
+      <h2> 404 Taco not found</h2>
+      <h3> The path name http://localhost:/3000{props.location.pathname} does not contain any tacos</h3>
       <Link to='/'>
       <Button>Return To Tacos</Button>
       </Link>
     </div>  
   )
-}
+};
 
-export default withRouter(ErrorDisplay)
+export default withRouter(ErrorDisplay);
 
