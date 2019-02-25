@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match the snapshot 1`] = `
+<div
+  className="App"
+>
+  <Route
+    component={[Function]}
+    path="/"
+  />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      path="/explore/:tacoPart"
+      render={[Function]}
+    />
+    <Route
+      component={[Function]}
+      path="/build_a_taco"
+    />
+    <Route
+      path="/:tacoPartRecipe"
+      render={[Function]}
+    />
+    <Route
+      render={[Function]}
+    />
+  </Switch>
+</div>
+`;

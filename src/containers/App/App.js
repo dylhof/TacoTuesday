@@ -59,6 +59,7 @@ export const mapDispatchToProps = dispatch => ({
 
 export const mapStateToProps = state => ({
   error: state.error,
+  isLoading: state.isLoading,
   baseLayers: state.baseLayers,
   mixins: state.mixins,
   condiments: state.condiments,
