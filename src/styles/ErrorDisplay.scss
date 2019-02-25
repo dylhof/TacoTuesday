@@ -1,14 +1,12 @@
 .notFoundMessage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include divFlex(center, start, column);
   padding: 20px;
 
   h2 {
-    font-family: $title;
+    @include text($title, 50px, center);
   }
 
   h3 {
-    font-family: $text;
+    @include text($copy, 30px, center);
   }
 }
