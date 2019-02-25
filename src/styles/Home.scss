@@ -1,0 +1,10 @@
+a {
+  text-decoration: none;
+}
+
+.randoTacoRefresh {
+  height: 300px;
+  min-width: 300px;
+  @include divFlex(center, center, row);
+  @include text($title, 30px, center);
+}

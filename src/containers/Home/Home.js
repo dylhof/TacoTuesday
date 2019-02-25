@@ -43,8 +43,8 @@ export class Home extends Component {
       <Grid container >
         {this.mapRandoTaco()}
         <Grid item xs={12} sm={6} md={4} lg={2} >
-          <div className='recipeCard' onClick={fetchRandoTaco}> 
-          <h3>Click here To get a new Rando Taco!</h3>
+          <div className='recipeCard randoTacoRefresh' onClick={fetchRandoTaco}> 
+          <h2>Click here To get a new Rando Taco!</h2>
           </div>
         </Grid>
       </Grid >
