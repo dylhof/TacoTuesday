@@ -6,11 +6,22 @@
   border-radius: 5px;
   background-color: $highlight;
 
+  .recipeListDiv{
+  }
+  
   .recipeList {
+    margin: 10px;
     overflow: scroll;
-    height: 75%;
     border: 2px solid $secondary;
     border-radius: 5px;
     padding: 3px;
+  }
+}
+
+.homeRecipes {
+  height: 300px;
+  
+  .homeList {
+    height: 250px
   }
 }
