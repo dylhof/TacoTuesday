@@ -26,7 +26,7 @@ export class Home extends Component {
     const jsxItems = randoTacoKeys.map(tacoLayer => {
       return (
         <Grid item key={randoTaco[tacoLayer].slug} xs={12} sm={6} md={4} lg={3}>
-          <Link to={`/taco/${randoTaco[tacoLayer].slug}`}>
+          <Link to={`/${randoTaco[tacoLayer].slug}`}>
           <RecipeCard className={classes.card} tacoRecipe={randoTaco[tacoLayer]}/>
           </Link>
         </Grid>)
