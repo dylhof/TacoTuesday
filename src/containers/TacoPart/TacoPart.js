@@ -22,11 +22,8 @@ const styles = {
 
 export class TacoPart extends Component {
   shiftTaco = (event) => {
-    
     const shiftDirection = event.target.classList.contains('left') ? -1 : 1
-    console.log(shiftDirection)
     const currentPosition = event.target.parentElement.children[1].scrollLeft;
-    console.log(currentPosition)
     event.target.parentElement.childNodes[1].scrollLeft = currentPosition +(600 * shiftDirection)
   }
 

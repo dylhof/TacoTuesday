@@ -2,10 +2,12 @@
 
 exports[`Menu should match the snapshot 1`] = `
 <WithStyles(Drawer)
+  className="drawer"
   onClose={[MockFunction]}
   open={true}
 >
   <div
+    className="menu"
     onClick={[MockFunction]}
     onKeyDown={[MockFunction]}
   >
@@ -13,15 +15,13 @@ exports[`Menu should match the snapshot 1`] = `
       replace={false}
       to="/"
     >
-      <h3
-        variant="display2"
-      >
-        Taco Home
+      <h3>
+        I'll taco you Home
       </h3>
     </Link>
     <ul>
       <h3>
-        Explore
+        Explore:
       </h3>
       <li>
         <Link
@@ -68,9 +68,7 @@ exports[`Menu should match the snapshot 1`] = `
       replace={false}
       to="/build_a_taco"
     >
-      <h3
-        variant="display2"
-      >
+      <h3>
         Build A Taco
       </h3>
     </Link>

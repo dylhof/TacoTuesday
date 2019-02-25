@@ -8,11 +8,12 @@ export const fetchAllTacoParts = () => {
     try {
       const tacoParts = ['base_layers', 'mixins', 'seasonings', 'condiments', 'shells']
       dispatch(actions.setLoading(true))
-      await tacoParts.forEach(async tacoPart => {
+      const unresolved = tacoParts.map(async tacoPart => {
         const actionName = 'set'+ tacoPart[0].toUpperCase() + tacoPart.slice(1)
         const tacoPartRecipes = await fetchCall(`${proxyURL}${tacoURL}${tacoPart}`)
         dispatch(actions[actionName](tacoPartRecipes))
       })
+      await Promise.all(unresolved)
       dispatch(actions.setLoading(false))
     } catch (error) {
       dispatch(actions.setError('ERROR Tacos Not Loading!'))

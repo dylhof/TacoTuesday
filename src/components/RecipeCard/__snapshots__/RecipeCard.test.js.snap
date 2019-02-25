@@ -1,30 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`RecipeCard should match the snapshot 1`] = `
-<WithStyles(Card)
-  className={Object {}}
+<div
+  className="recipeCard undefined"
 >
   <h3>
     yummyTacos
   </h3>
-  <WithStyles(List)
-    className={Object {}}
+  <ul
+    className="recipeList undefined"
     dense={true}
   >
-    <WithStyles(ListItem)
-      key="4fd51248-ed4f-4616-b947-0f92bf8fcf07"
+    <li
+      key="6fa6112c-9e4b-4b30-ab46-03dd827faf78"
     >
-      <WithStyles(ListItemText)>
-        lots of steps 
-      </WithStyles(ListItemText)>
-    </WithStyles(ListItem)>
-    <WithStyles(ListItem)
-      key="de2343b5-9653-4b6a-89ac-4217434bb792"
+      lots of steps 
+    </li>
+    <li
+      key="2aa4d2d4-4ff3-4eb5-9e20-d8531e7d5a77"
     >
-      <WithStyles(ListItemText)>
-         another step
-      </WithStyles(ListItemText)>
-    </WithStyles(ListItem)>
-  </WithStyles(List)>
-</WithStyles(Card)>
+       another step
+    </li>
+  </ul>
+</div>
 `;

@@ -1,3 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home should match the snapshot 1`] = `undefined`;
+exports[`Home should match the snapshot 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <WithStyles(Grid)
+    item={true}
+    key="6eb11400-4ecf-44ef-9b19-773029cb3f48"
+    lg={3}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <Link
+      replace={false}
+      to="/best_taco"
+    >
+      <RecipeCard
+        listStyleName="homeList"
+        styleName="homeRecipes"
+        tacoRecipe={
+          Object {
+            "name": "best taco",
+            "recipe": "this is a great recipe 
+ it is yummy",
+            "slug": "best_taco",
+          }
+        }
+      />
+    </Link>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    lg={2}
+    md={4}
+    sm={6}
+    xs={12}
+  >
+    <div
+      className="recipeCard randoTacoRefresh"
+    >
+      <h2>
+        Click here To get a new Rando Taco!
+      </h2>
+    </div>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
