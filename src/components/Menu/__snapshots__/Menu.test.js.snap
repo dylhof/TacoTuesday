@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the snapshot 1`] = `
+<WithStyles(Drawer)
+  onClose={[MockFunction]}
+  open={true}
+>
+  <div
+    onClick={[MockFunction]}
+    onKeyDown={[MockFunction]}
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      <h3
+        variant="display2"
+      >
+        Taco Home
+      </h3>
+    </Link>
+    <ul>
+      <h3>
+        Explore
+      </h3>
+      <li>
+        <Link
+          replace={false}
+          to="/explore/baseLayers"
+        >
+          Base-Layers
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/explore/mixins"
+        >
+          Mixins
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/explore/condiments"
+        >
+          Condiments
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/explore/seasonings"
+        >
+          Seasonings
+        </Link>
+      </li>
+      <li>
+        <Link
+          replace={false}
+          to="/explore/shells"
+        >
+          Shells
+        </Link>
+      </li>
+    </ul>
+    <Link
+      replace={false}
+      to="/build_a_taco"
+    >
+      <h3
+        variant="display2"
+      >
+        Build A Taco
+      </h3>
+    </Link>
+  </div>
+</WithStyles(Drawer)>
+`;
