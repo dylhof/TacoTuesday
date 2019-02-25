@@ -7,6 +7,7 @@ import {fetchRandoTaco} from '../../thunks/fetchRandoTaco';
 import { connect } from 'react-redux';
 import {fetchAllTacoParts} from '../../thunks/fetchAllTacoParts';
 import TacoPart from '../TacoPart/TacoPart';
+import BuildATaco from '../BuildATaco/BuildATaco'
 // import('../../thunks/fetchAllTacoParts').then(fetchAllTacoParts => {fetchAllTacoParts.fetchAllTacoParts()})
 
 
@@ -31,6 +32,7 @@ export class App extends Component {
         <Switch>
         <Route path='/' exact component={Home} />
           <Route path='/explore/:tacoPart' render={this.findTacoPart}/>
+          <Route path='/build_a_taco' component={BuildATaco} />
           <Route render={ErrorDisplay}/>
         </Switch>
         {this.props.error && <h2>{this.props.error}</h2>}
