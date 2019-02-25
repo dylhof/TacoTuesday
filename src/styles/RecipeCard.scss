@@ -1,0 +1,16 @@
+.recipeCard {
+  margin: 10px;
+  padding: 10px;
+  opacity: .8;
+  min-width: 300px;
+  border-radius: 5px;
+  background-color: $highlight;
+
+  .recipeList {
+    overflow: scroll;
+    height: 75%;
+    border: 2px solid $secondary;
+    border-radius: 5px;
+    padding: 3px;
+  }
+}
