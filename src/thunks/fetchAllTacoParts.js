@@ -7,7 +7,6 @@ export const fetchAllTacoParts = () => {
   const tacoParts = ['base_layers', 'mixins', 'seasonings', 'condiments', 'shells']
   
   return async dispatch => {
-    console.log('fetchAllTacoParts is fireing')
     try {
       tacoParts.forEach(async tacoPart => {
       const tacoPartRecipes = await fetchCall(`${proxyURL}${tacoURL}${tacoPart}`)
@@ -16,7 +15,7 @@ export const fetchAllTacoParts = () => {
           dispatch(actions.setBaseLayers(tacoPartRecipes))
           break;
         case 'mixins':
-          dispatch(actions.setMixins(tacoPartRecipes))
+          dispatch(actions['setMixins'](tacoPartRecipes))
           break;
         case 'seasonings':
           dispatch(actions.setSeasonings(tacoPartRecipes))
@@ -32,7 +31,6 @@ export const fetchAllTacoParts = () => {
       }
       })
     } catch (error) {
-      console.log('error is firing')
       dispatch(actions.setError('ERROR Tacos Not Loading!'))
     }
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Grid, Card, List, ListItem, ListItemText, Typography } from '@material-ui/core'
+import { Grid, } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles'
 import uuid from 'uuid/v4';
 import {Link} from 'react-router-dom';
@@ -25,7 +25,7 @@ export class Home extends Component {
     const randoTacoKeys = Object.keys(randoTaco)
     const jsxItems = randoTacoKeys.map(tacoLayer => {
       return (
-        <Grid item key={randoTaco[tacoLayer].slug} xs={12} sm={6} md={4} lg={3}>
+        <Grid item key={uuid()} xs={12} sm={6} md={4} lg={3}>
           <Link to={`/${randoTaco[tacoLayer].slug}`}>
           <RecipeCard 
             styleName={'homeRecipes'}
@@ -38,7 +38,7 @@ export class Home extends Component {
   }
 
   render() {
-    const {classes, fetchRandoTaco} = this.props
+    const { fetchRandoTaco } = this.props
     return (
       <Grid container >
         {this.mapRandoTaco()}
