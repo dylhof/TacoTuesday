@@ -6,17 +6,19 @@ const Menu = (props) => {
   return (
     <Drawer 
     open={props.showMenu} 
-    onClose={props.toggleShowMenu}>
+    onClose={props.toggleShowMenu}
+    className='drawer'>
       <div
         onClick={props.toggleShowMenu}
-        onKeyDown={props.toggleShowMenu}>
+        onKeyDown={props.toggleShowMenu}
+        className='menu'>
         <Link to='/'>
-          <h3 variant='display2'>
-            Taco Home
+          <h3>
+            I'll taco you Home
           </h3>
         </Link>
         <ul>
-          <h3>Explore</h3>
+          <h3>Explore:</h3>
           <li>
             <Link to='/explore/baseLayers'>
               Base-Layers
@@ -44,7 +46,7 @@ const Menu = (props) => {
           </li>
         </ul>
         <Link to='/build_a_taco'>
-          <h3 variant='display2'>
+          <h3>
             Build A Taco
           </h3>
         </Link>

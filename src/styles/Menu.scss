@@ -1,0 +1,24 @@
+.drawer {
+}
+
+.menu {
+  background-color: $lowlight;
+  height: 100vh;
+  
+  h3 {
+    @include text($title, 30px, left);
+    margin: 15px;
+  }
+  li{
+    @include text($copy, 20px, left);
+    margin: 10px 10px 10px 30px;
+    list-style-type: none;
+  }
+  a {
+    color: $text;
+    text-decoration: none;
+    &:visited {
+      color: $text;
+    }
+  }
+}
