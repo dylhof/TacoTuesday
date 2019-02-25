@@ -1,0 +1,12 @@
+.carouselDisplay {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  display: flex;
+  width: 90%;
+  overflow: scroll;
+}

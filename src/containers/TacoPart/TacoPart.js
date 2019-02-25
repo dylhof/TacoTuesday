@@ -1,24 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
-import { IconButton } from '@material-ui/core';
-import { ArrowForwardIos, ArrowBackIos } from '@material-ui/icons';
-import { withStyles } from '@material-ui/core/styles';
 import uuid from 'uuid/v4';
-
-const styles = {
-  
-  carouselDisplay: {
-    display: 'flex',
-    alignContent: 'center',
-    alignItems: 'center'
-  },
-  carousel: {
-    display: 'flex',
-    width: '90%',
-    overflow: 'scroll',
-  }
-}
 
 export class TacoPart extends Component {
   shiftTaco = (event) => {
@@ -28,18 +11,20 @@ export class TacoPart extends Component {
   }
 
   render () {
-    const {classes} = this.props;
     const part = this.props.tacoPart;
     const tacoPartRecipes = this.props[part].map(recipe => {
       return (
-        <RecipeCard key={uuid()} tacoRecipe={recipe} />
+        <RecipeCard 
+        key={uuid()} 
+        tacoRecipe={recipe} styleName='tacoPartRecipes'
+        listStyleName='tacoPartList'/>
       )
     });
 
     return (
-      <div className={classes.carouselDisplay}>
+      <div className='carouselDisplay'>
       <i className="fas fa-chevron-left left" onClick={this.shiftTaco}></i>
-        <div className={classes.carousel}>
+        <div className='carousel'>
           {tacoPartRecipes}
         </div>
         <i className="fas fa-chevron-right right" onClick={this.shiftTaco}></i>
@@ -56,4 +41,4 @@ export const mapStateToProps = state => ({
   shells: state.shells
 })
 
-export default withStyles(styles)(connect(mapStateToProps)(TacoPart));
+export default connect(mapStateToProps)(TacoPart);
