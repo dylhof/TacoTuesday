@@ -15,15 +15,12 @@ export class Header extends Component {
 
   render() {
     return (
-      < AppBar position='sticky'>
+      <header className='header'>
       {!this.state.showMenu && 
-      <IconButton onClick={this.toggleShowMenu} >
-          <ArrowForwardIos />
-        </IconButton>}
-        
-        <h1>TacoTuesday</h1>
+         <i class="fas fa-chevron-right fa-2x" onClick={this.toggleShowMenu}></i>}
+        <h1>The Taste Of Taco Tuesday</h1>
         {this.state.showMenu && <Menu toggleShowMenu={this.toggleShowMenu} showMenu={this.state.showMenu}/>}
-      </AppBar>
+      </header>
     )
   }
 }
