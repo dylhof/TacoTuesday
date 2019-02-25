@@ -8,7 +8,6 @@ const Menu = (props) => {
     open={props.showMenu} 
     onClose={props.toggleShowMenu}>
       <div
-        role="button"
         onClick={props.toggleShowMenu}
         onKeyDown={props.toggleShowMenu}>
         <Link to='/'>
