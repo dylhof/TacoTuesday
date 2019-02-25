@@ -1,0 +1,14 @@
+.notFoundMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  h2 {
+    font-family: $title;
+  }
+
+  h3 {
+    font-family: $text;
+  }
+}
