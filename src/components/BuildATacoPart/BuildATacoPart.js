@@ -29,13 +29,18 @@ export class BuildATacoPart extends Component {
     const {currentRecipe} = this.state
     const { tacoPartName } = this.props
     return(
-      <div>
-        <h2>{tacoPartName}</h2>
+      <div className='buildATacoPartDiv'>
+        <h2>{tacoPartName}:</h2>
         <select onChange={this.selectRecipe}>
           <option value=''>Select a Recipe</option>
           {this.makeOptions()}
         </select>
-        {currentRecipe ? <RecipeCard tacoRecipe={currentRecipe}/> : <h3>Select a {tacoPartName}</h3>}
+        {currentRecipe ? 
+          <RecipeCard 
+            tacoRecipe={currentRecipe}
+            styleName={'buildATacoRecipe'}
+            listStyleName={'buildATacoList'} /> : 
+            <h3>Select a {tacoPartName}</h3>}
       </div>
     )
   }

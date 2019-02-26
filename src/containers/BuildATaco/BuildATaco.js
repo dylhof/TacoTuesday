@@ -15,7 +15,7 @@ export class BuildATaco extends Component{
 
   render() {
     return(
-      <div>
+      <div className='buildATacoDiv'>
         {this.tacoChoices()}
       </div>
     )
