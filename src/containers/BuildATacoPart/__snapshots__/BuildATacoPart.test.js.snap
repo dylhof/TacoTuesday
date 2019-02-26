@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BuildATacoPart should match the snapshot 1`] = `
+<div>
+  <h2>
+    mmm... Tacos
+  </h2>
+  <select
+    onChange={[Function]}
+  >
+    <option
+      value=""
+    >
+      Select a Recipe
+    </option>
+    <option
+      key="1"
+      value="yummy Taco"
+    >
+      yummy Taco
+    </option>
+    <option
+      key="1"
+      value="another yum taco"
+    >
+      another yum taco
+    </option>
+  </select>
+  <h3>
+    Select a 
+    mmm... Tacos
+  </h3>
+</div>
+`;

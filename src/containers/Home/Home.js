@@ -1,27 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Grid, } from '@material-ui/core'
-import { withStyles } from '@material-ui/core/styles'
 import uuid from 'uuid/v4';
 import {Link} from 'react-router-dom';
 import { fetchRandoTaco } from '../../thunks/fetchRandoTaco';
 import  RecipeCard  from '../../components/RecipeCard/RecipeCard';
 
-const styles = {
-  card: {
-    height: '250px',
-  },
-  subCard: {
-    margin: '10px',
-    padding: '10px',
-    opacity: '.8',
-    height: '260px'
-  }
-}
 
 export class Home extends Component {
   mapRandoTaco = () => {
-    const { randoTaco, classes } = this.props
+    const { randoTaco } = this.props
     const randoTacoKeys = Object.keys(randoTaco)
     const jsxItems = randoTacoKeys.map(tacoLayer => {
       return (
@@ -60,4 +48,4 @@ export const mapDispatchToProps = dispatch => ({
   fetchRandoTaco: () => dispatch(fetchRandoTaco())
 })
 
-export default withStyles(styles)(connect(mapStateToProps, mapDispatchToProps)(Home))
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
