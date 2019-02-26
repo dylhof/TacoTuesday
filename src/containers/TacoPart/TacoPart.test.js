@@ -34,9 +34,17 @@ describe('TacoPart', () => {
   })
 
   it.skip('should shift the carousel', () => {
-    const mockEvent = {event: {target: {classList: {0: 'left'}, parentElement:{children: {1: {scrollLeft: 0}}}}} }
-    wrapper.instance().shiftTaco(mockEvent)
-    expect(mockEvent.target.parentElement.children[1].scrollLeft).toBe(-600)
+    const event = {target: 
+      {classList: {
+        contains() {return ['left']}},
+       parentElement:
+       {children: [{},{scrollLeft: 0}],
+       childNodes: ['', { srollLeft: 0 }]}
+    }}
+
+    wrapper.instance().shiftTaco(event)
+    wrapper.instance().shiftTaco(event)
+    expect(event.target.parentElement.children[1].scrollLeft).toBe(-600)
   });
 
   describe('mapStateToProps', () => {
