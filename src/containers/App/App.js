@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Header} from '../../components/Header/Header';
 import Home from '../Home/Home';
 import { ErrorDisplay } from '../../components/ErrorDisplay/ErrorDisplay';
-import { withRouter, Switch, Route } from 'react-router-dom';
+import { withRouter, Switch, Route, Link } from 'react-router-dom';
 import {fetchRandoTaco} from '../../thunks/fetchRandoTaco';
 import { connect } from 'react-redux';
 import {fetchAllTacoParts} from '../../thunks/fetchAllTacoParts';
@@ -31,7 +31,10 @@ export class App extends Component {
     const allRecipes = [...baseLayers, ...mixins, ...condiments, ...seasonings, ...shells]
     const tacoPartRecipe = allRecipes.find(recipe => recipe.slug === match.params.tacoPartRecipe)
     return (
-      <RecipeCard tacoRecipe={tacoPartRecipe} /> 
+      <div onClick={() => this.props.history.goBack()}>
+        <RecipeCard tacoRecipe={tacoPartRecipe} /> 
+      </div>
+
     )
   }
 
