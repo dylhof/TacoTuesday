@@ -39,7 +39,7 @@ describe('actions', () => {
     //setup
     const expectedAction = { type: actions.SET_BASE_LAYERS, baseLayers: mockTacoPart}
     //execution
-    const result = actions.setBaseLayers(mockTacoPart)
+    const result = actions.setBase_layers(mockTacoPart)
     //expectation
     expect(result).toEqual(expectedAction)
   });
