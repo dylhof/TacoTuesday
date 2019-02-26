@@ -6,7 +6,7 @@ exports[`Home should match the snapshot 1`] = `
 >
   <WithStyles(Grid)
     item={true}
-    key="6eb11400-4ecf-44ef-9b19-773029cb3f48"
+    key="1"
     lg={3}
     md={4}
     sm={6}

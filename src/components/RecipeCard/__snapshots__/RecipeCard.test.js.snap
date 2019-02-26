@@ -12,12 +12,12 @@ exports[`RecipeCard should match the snapshot 1`] = `
     dense={true}
   >
     <li
-      key="6fa6112c-9e4b-4b30-ab46-03dd827faf78"
+      key="1"
     >
       lots of steps 
     </li>
     <li
-      key="2aa4d2d4-4ff3-4eb5-9e20-d8531e7d5a77"
+      key="1"
     >
        another step
     </li>

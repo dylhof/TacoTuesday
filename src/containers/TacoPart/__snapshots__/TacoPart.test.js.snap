@@ -12,7 +12,7 @@ exports[`TacoPart should match the snapshot 1`] = `
     className="carousel"
   >
     <RecipeCard
-      key="9a5a2db4-d901-48e1-bcb7-660076501a7c"
+      key="1"
       listStyleName="tacoPartList"
       styleName="tacoPartRecipes"
       tacoRecipe={
@@ -22,7 +22,7 @@ exports[`TacoPart should match the snapshot 1`] = `
       }
     />
     <RecipeCard
-      key="83d0e232-77a4-4dbd-b69a-fbcb2c5cf922"
+      key="1"
       listStyleName="tacoPartList"
       styleName="tacoPartRecipes"
       tacoRecipe={

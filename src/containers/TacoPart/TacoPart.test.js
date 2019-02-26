@@ -1,7 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { TacoPart, mapStateToProps } from './TacoPart';
+import uuid from 'uuid/v4';
 
+jest.mock('uuid/v4');
+uuid.mockReturnValue(1);
 
 describe('TacoPart', () => {
   let wrapper;

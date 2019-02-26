@@ -1,6 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { RecipeCard } from './RecipeCard';
+import uuid from 'uuid/v4';
+
+jest.mock('uuid/v4');
+uuid.mockReturnValue(1);
 
 describe('RecipeCard', () => {
   let wrapper;
