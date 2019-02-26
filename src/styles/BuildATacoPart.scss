@@ -1,0 +1,18 @@
+.buildATacoPartDiv {
+  @include divFlex(center, center, column);
+  margin: 10px;
+  width: 20%;
+
+  h2 {
+    @include text($title, 20px, center)
+  }
+
+  h3 {
+    @include text($title, 16px, center)
+  }
+
+  select{
+    width: 80%;
+    outline-color: $secondary;
+  }
+}

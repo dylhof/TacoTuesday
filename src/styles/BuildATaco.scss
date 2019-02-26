@@ -1,0 +1,8 @@
+.buildATacoDiv {
+  @include divFlex(flex-start, space-around, row);
+  background-color: $highlight;
+  opacity: .9;
+  height: 100vh;
+  margin: 5px;
+  border-radius: 5px
+}
