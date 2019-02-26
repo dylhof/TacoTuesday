@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import {BuildATacoPart} from '../BuildATacoPart/BuildATacoPart';
+import {BuildATacoPart} from '../../components/BuildATacoPart/BuildATacoPart';
 import uuid from 'uuid/v4';
 
 export class BuildATaco extends Component{
