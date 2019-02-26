@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import {BuildATacoPart} from '../BuildATacoPart/BuildATacoPart'
+import {BuildATacoPart} from '../BuildATacoPart/BuildATacoPart';
+import uuid from 'uuid/v4';
 
 export class BuildATaco extends Component{
 
   tacoChoices = () => {
     const {baseLayers, mixins, seasonings, condiments, shells } = this.props
     const tacoParts = [baseLayers, mixins, seasonings, condiments, shells]
-    const tacoPartName = ['Base Layers:', 'Mixins:', 'Seasonings:', 'Condiments:', 'Shells:']
-    const jsxTacoChoices = tacoParts.map((part, i) => <BuildATacoPart tacoPart={part} tacoPartName={tacoPartName[i]}/>)
+    const tacoPartName = ['Base Layer', 'Mixin', 'Seasoning', 'Condiment', 'Shell']
+    const jsxTacoChoices = tacoParts.map((part, i) => <BuildATacoPart key={uuid()} tacoPart={part} tacoPartName={tacoPartName[i]}/>)
     return jsxTacoChoices
   }
 
