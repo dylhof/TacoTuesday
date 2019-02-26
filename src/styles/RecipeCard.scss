@@ -32,6 +32,19 @@
   height: 400px;
 
   .tacoPartList {
-    height: 340px
+    height: 330px
+  }
+}
+
+.buildATacoRecipe {
+  height: 350px;
+  min-width: 20%;
+  
+  h3{ 
+    text-align: center;
+  }
+
+  .buildATacoList {
+    height: 280px;
   }
 }
