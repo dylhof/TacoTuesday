@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import { Link } from 'react-router-dom';
 import uuid from 'uuid/v4';
 
 export class TacoPart extends Component {
@@ -15,20 +16,22 @@ export class TacoPart extends Component {
     const part = this.props.tacoPart;
     const tacoPartRecipes = this.props[part].map(recipe => {
       return (
-        <RecipeCard 
-        key={uuid()} 
-        tacoRecipe={recipe} styleName='tacoPartRecipes'
-        listStyleName='tacoPartList'/>
+        <Link to={`/${recipe.slug}`}>
+          <RecipeCard 
+          key={uuid()} 
+          tacoRecipe={recipe} styleName='tacoPartRecipes'
+          listStyleName='tacoPartList'/>
+        </Link>
       )
     });
 
     return (
       <div className='carouselDisplay'>
       <i className="fas fa-chevron-left fa-2x left" onClick={this.shiftTaco}></i>
-        <div className='carousel'>
+        <div className='carousel'>     
           {tacoPartRecipes}
         </div>
-        <i className="fas fa-chevron-right fa-2x right" onClick={this.shiftTaco}></i>
+       <i className="fas fa-chevron-right fa-2x right" onClick={this.shiftTaco}></i>
       </div>
     )
   };

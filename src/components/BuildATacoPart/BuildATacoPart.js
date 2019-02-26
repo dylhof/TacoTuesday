@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import uuid from 'uuid/v4';
+import { Link } from 'react-router-dom';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 
 export class BuildATacoPart extends Component {
@@ -36,10 +37,13 @@ export class BuildATacoPart extends Component {
           {this.makeOptions()}
         </select>
         {currentRecipe ? 
+        <Link to={`/${currentRecipe.slug}`}>
           <RecipeCard 
             tacoRecipe={currentRecipe}
             styleName={'buildATacoRecipe'}
-            listStyleName={'buildATacoList'} /> : 
+            listStyleName={'buildATacoList'} />
+        </Link>
+           : 
             <h3>Select a {tacoPartName}</h3>}
       </div>
     )
