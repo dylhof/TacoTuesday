@@ -5,7 +5,10 @@
 
 Current Version:
 ![taco-tuesday-home](https://user-images.githubusercontent.com/37079656/53461245-2a422d80-39fd-11e9-91b1-d70480bd7453.png)
+![build-a-taco](https://user-images.githubusercontent.com/37079656/53461633-6924b300-39fe-11e9-9878-b5e0c1daf24d.png)
 
+Wireframe:
+![taco-tuesday-wireframe](https://user-images.githubusercontent.com/37079656/53461565-37abe780-39fe-11e9-920a-cb6f2a49fc40.png)
 ## Getting Started
 
 Follow the instructions below to clone the project locally:
