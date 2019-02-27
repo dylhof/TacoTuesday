@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Taste of Taco Tuesday
 
-## Available Scripts
+## Project Description
+  Taste of Taco Tuesday is an application that allows users to spice up their lives with a fantastic array of taco recipes.  Choose recipes from baselayers, mixins, seasonings, condiments and shells to make the perfect taco for your next taco Tuesday!
 
-In the project directory, you can run:
+Current Version:
+![taco-tuesday-home](https://user-images.githubusercontent.com/37079656/53461245-2a422d80-39fd-11e9-91b1-d70480bd7453.png)
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Follow the instructions below to clone the project locally:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Create a local project folder:
+```
+mkdir TacoTuesday
+```
+Clone the project within your new directory:
+```
+$ git clone https://github.com/dylhof/TacoTuesday.git
+```
+$ npm start
+```
+Install modules in the directory:
+```
+$ npm install
+```
+Start the server:
+```
+$ npm start
+```
 
-### `npm test`
+The application can then be viewed at localhost:3001 in your browser. 
+Enjoy using TacoTuesday to spice up your life!
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Development Notes:
+The Taste of Taco Tuesday was created with React, React Router, Redux, Redux Thunks, SCSS and Material UI. The application focused on practicing use of data fetched from an external API. Tests were written using Jest and Enzyme. 
 
-### `npm run build`
+## Future Development and Extensions Notes:
+In the future, I would like to implement favorite functionality to save taco recipes for future exploration in the kitchen.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Original Assignment
+http://frontend.turing.io/projects/self-directed-project.html
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Contributors
+Dylan Hofmann [@dylhof](https://github.com/dylhof)<br/>
