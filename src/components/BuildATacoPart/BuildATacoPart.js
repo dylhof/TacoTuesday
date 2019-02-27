@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import uuid from 'uuid/v4';
 import { Link } from 'react-router-dom';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import PropTypes from 'prop-types';
 
 export class BuildATacoPart extends Component {
   constructor (props) {
@@ -48,4 +49,9 @@ export class BuildATacoPart extends Component {
       </div>
     )
   }
+}
+
+BuildATacoPart.propTypes = {
+  tacoPartName: PropTypes.string,
+  tacoPart: PropTypes.array
 }

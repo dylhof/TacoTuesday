@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { AppBar, IconButton } from '@material-ui/core'
-import { ArrowForwardIos } from '@material-ui/icons'
 import  Menu  from '../Menu/Menu'
 
 
@@ -17,7 +15,7 @@ export class Header extends Component {
     return (
       <header className='header'>
       {!this.state.showMenu && 
-         <i class="fas fa-chevron-right fa-2x" onClick={this.toggleShowMenu}></i>}
+         <i className="fas fa-chevron-right fa-2x" onClick={this.toggleShowMenu}></i>}
         <h1>The Taste Of Taco Tuesday</h1>
         {this.state.showMenu && <Menu toggleShowMenu={this.toggleShowMenu} showMenu={this.state.showMenu}/>}
       </header>

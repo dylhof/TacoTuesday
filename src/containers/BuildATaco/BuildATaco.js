@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import {BuildATacoPart} from '../../components/BuildATacoPart/BuildATacoPart';
 import uuid from 'uuid/v4';
+import PropTypes from 'prop-types';
 
 export class BuildATaco extends Component{
 
@@ -31,3 +32,11 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(BuildATaco)
+
+BuildATaco.propTypes = {
+  baseLayers: PropTypes.array,
+  mixins: PropTypes.array,
+  condiments: PropTypes.array,
+  seasonings: PropTypes.array,
+  shells: PropTypes.array
+}

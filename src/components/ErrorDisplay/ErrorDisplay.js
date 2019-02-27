@@ -17,4 +17,3 @@ export const ErrorDisplay = (props) => {
 };
 
 export default withRouter(ErrorDisplay);
-

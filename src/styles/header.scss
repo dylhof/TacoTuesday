@@ -1,12 +1,12 @@
 .header {
-  @include divFlex(start, flex-start, row);
+  @include divFlex(flex-start, flex-start, row);
   height: 125px;
   background-color: $primary;
   box-shadow: 0px 2px 3px #20222285;
   border-bottom: 2px solid $secondary;
 
   h1 {
-    @include text($title, 38px, start);
+    @include text($title, 38px, flex-start);
     margin: 20px 20px 0 0;
   }
 

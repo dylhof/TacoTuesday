@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import { Link } from 'react-router-dom';
 import uuid from 'uuid/v4';
+import PropTypes from 'prop-types';
 
 export class TacoPart extends Component {
   shiftTaco = (event) => {
-    debugger
     const shiftDirection = event.target.classList.contains('left') ? -1 : 1
     const currentPosition = event.target.parentElement.children[1].scrollLeft;
     event.target.parentElement.childNodes[1].scrollLeft = currentPosition +(600 * shiftDirection)
@@ -46,3 +46,12 @@ export const mapStateToProps = state => ({
 })
 
 export default connect(mapStateToProps)(TacoPart);
+
+TacoPart.propTypes = {
+  baseLayers: PropTypes.array,
+  mixins: PropTypes.array,
+  condiments: PropTypes.array,
+  seasonings: PropTypes.array,
+  shells: PropTypes.array,
+  tacoPart: PropTypes.string
+}

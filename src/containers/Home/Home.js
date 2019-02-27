@@ -5,7 +5,7 @@ import uuid from 'uuid/v4';
 import {Link} from 'react-router-dom';
 import { fetchRandoTaco } from '../../thunks/fetchRandoTaco';
 import  RecipeCard  from '../../components/RecipeCard/RecipeCard';
-
+import PropTypes from 'prop-types';
 
 export class Home extends Component {
   mapRandoTaco = () => {
@@ -52,3 +52,9 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)
+
+Home.propTypes = {
+  randoTaco: PropTypes.object,
+  isLoading: PropTypes.bool,
+  fetchRandoTaco: PropTypes.func
+}
