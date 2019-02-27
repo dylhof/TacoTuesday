@@ -11,26 +11,36 @@ exports[`TacoPart should match the snapshot 1`] = `
   <div
     className="carousel"
   >
-    <RecipeCard
-      key="1"
-      listStyleName="tacoPartList"
-      styleName="tacoPartRecipes"
-      tacoRecipe={
-        Object {
-          "slug": "bad_ass_tortillas",
+    <Link
+      replace={false}
+      to="/bad_ass_tortillas"
+    >
+      <RecipeCard
+        key="1"
+        listStyleName="tacoPartList"
+        styleName="tacoPartRecipes"
+        tacoRecipe={
+          Object {
+            "slug": "bad_ass_tortillas",
+          }
         }
-      }
-    />
-    <RecipeCard
-      key="1"
-      listStyleName="tacoPartList"
-      styleName="tacoPartRecipes"
-      tacoRecipe={
-        Object {
-          "slug": "naan",
+      />
+    </Link>
+    <Link
+      replace={false}
+      to="/naan"
+    >
+      <RecipeCard
+        key="1"
+        listStyleName="tacoPartList"
+        styleName="tacoPartRecipes"
+        tacoRecipe={
+          Object {
+            "slug": "naan",
+          }
         }
-      }
-    />
+      />
+    </Link>
   </div>
   <i
     className="fas fa-chevron-right fa-2x right"

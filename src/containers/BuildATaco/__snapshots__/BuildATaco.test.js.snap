@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`BuildATaco should match the snapshot 1`] = `
-<div>
+<div
+  className="buildATacoDiv"
+>
   <BuildATacoPart
     key="1"
     tacoPartName="Base Layer"

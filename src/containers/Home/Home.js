@@ -26,14 +26,16 @@ export class Home extends Component {
   }
 
   render() {
-    const { fetchRandoTaco } = this.props
+    const { fetchRandoTaco, isLoading } = this.props
     return (
       <Grid container >
         {this.mapRandoTaco()}
         <Grid item xs={12} sm={6} md={4} lg={2} >
+        {!isLoading && 
           <div className='recipeCard randoTacoRefresh' onClick={fetchRandoTaco}> 
-          <h2>Click here To get a new Rando Taco!</h2>
+            <h2>Click here To get a new Rando Taco!</h2>
           </div>
+        }
         </Grid>
       </Grid >
     )
@@ -41,7 +43,8 @@ export class Home extends Component {
 }
 
 export const mapStateToProps = state => ({
-  randoTaco: state.randoTaco
+  randoTaco: state.randoTaco,
+  isLoading: state.isLoading
 })
 
 export const mapDispatchToProps = dispatch => ({

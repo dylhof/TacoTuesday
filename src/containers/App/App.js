@@ -39,9 +39,12 @@ export class App extends Component {
   }
 
   render() {
+    const { isLoading, error } = this.props
     return (
       <div className="App">
         <Route path='/' component={Header} />
+        {isLoading && <h2>Loading...</h2>}
+        {error && <h2>{error}</h2>}
         <Switch>
         <Route path='/' exact component={Home} />
           <Route path='/explore/:tacoPart' render={this.findTacoPart}/>
@@ -49,7 +52,6 @@ export class App extends Component {
           <Route path='/:tacoPartRecipe' render={this.findTacoPartRecipe}/>
           <Route render={ErrorDisplay}/>
         </Switch>
-        {this.props.error && <h2>{this.props.error}</h2>}
       </div>
     );
   }
