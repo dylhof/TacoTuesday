@@ -9,6 +9,7 @@ import {fetchAllTacoParts} from '../../thunks/fetchAllTacoParts';
 import TacoPart from '../TacoPart/TacoPart';
 import BuildATaco from '../BuildATaco/BuildATaco';
 import RecipeCard from '../../components/RecipeCard/RecipeCard';
+import { Loading } from '../../components/Loading/Loading'
 // import('../../thunks/fetchAllTacoParts').then(fetchAllTacoParts => {fetchAllTacoParts.fetchAllTacoParts()})
 
 
@@ -43,7 +44,7 @@ export class App extends Component {
     return (
       <div className="App">
         <Route path='/' component={Header} />
-        {isLoading && <h2>Loading...</h2>}
+        {isLoading && <Loading/>}
         {error && <h2>{error}</h2>}
         <Switch>
         <Route path='/' exact component={Home} />
