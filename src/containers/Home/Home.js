@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import { fetchRandoTaco } from '../../thunks/fetchRandoTaco';
 import  RecipeCard  from '../../components/RecipeCard/RecipeCard';
 import PropTypes from 'prop-types';
+import Title from '../Title/Title';
 
 export class Home extends Component {
   mapRandoTaco = () => {
@@ -29,6 +30,7 @@ export class Home extends Component {
     const { fetchRandoTaco, isLoading } = this.props
     return (
       <Grid container >
+        <Title/>
         {this.mapRandoTaco()}
         <Grid item xs={12} sm={6} md={4} lg={2} >
         {!isLoading && 
