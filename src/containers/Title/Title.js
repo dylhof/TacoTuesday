@@ -13,6 +13,16 @@ export class Title extends Component{
         return 'home'
       case '/explore/mixins':
           return 'mixins'
+      case '/explore/shells':
+        return 'shells'
+      case '/explore/baseLayers':
+        return 'baselayers'
+      case '/explore/condiments':
+        return 'condiments'
+      case '/explore/seasonings':
+        return 'seasonings'
+      case '/build_a_taco':
+        return 'build_a_taco'
       default:
         return 'TACOS!'
     }
