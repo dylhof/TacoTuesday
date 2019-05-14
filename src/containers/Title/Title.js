@@ -31,7 +31,7 @@ export class Title extends Component{
   render(){
     const page = this.findTitle()
     return(
-      <div>
+      <div className='Title--div'>
           <h3>{title[page].title}</h3>
           <p>{title[page].description}</p>
       </div>
