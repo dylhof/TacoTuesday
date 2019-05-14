@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {BuildATacoPart} from '../../components/BuildATacoPart/BuildATacoPart';
 import uuid from 'uuid/v4';
 import PropTypes from 'prop-types';
+import Title from '../Title/Title';
 
 export class BuildATaco extends Component{
 
@@ -17,6 +18,7 @@ export class BuildATaco extends Component{
   render() {
     return(
       <div className='buildATacoDiv'>
+        <Title/>
         {this.tacoChoices()}
       </div>
     )

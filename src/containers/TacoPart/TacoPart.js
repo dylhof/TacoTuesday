@@ -4,6 +4,7 @@ import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import { Link } from 'react-router-dom';
 import uuid from 'uuid/v4';
 import PropTypes from 'prop-types';
+import Title from '../Title/Title';
 
 export class TacoPart extends Component {
   shiftTaco = (event) => {
@@ -26,12 +27,15 @@ export class TacoPart extends Component {
     });
 
     return (
-      <div className='carouselDisplay'>
-      <i className="fas fa-chevron-left fa-2x left" onClick={this.shiftTaco}></i>
-        <div className='carousel'>     
-          {tacoPartRecipes}
+      <div>
+        <Title/>
+        <div className='carouselDisplay'>
+        <i className="fas fa-chevron-left fa-2x left" onClick={this.shiftTaco}></i>
+          <div className='carousel'>     
+            {tacoPartRecipes}
+          </div>
+        <i className="fas fa-chevron-right fa-2x right" onClick={this.shiftTaco}></i>
         </div>
-       <i className="fas fa-chevron-right fa-2x right" onClick={this.shiftTaco}></i>
       </div>
     )
   };
