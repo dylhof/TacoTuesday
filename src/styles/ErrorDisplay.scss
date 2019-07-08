@@ -1,5 +1,5 @@
 .notFoundMessage {
-  @include divFlex(center, start, column);
+  @include divFlex(center, flex-start, column);
   padding: 20px;
 
   h2 {
