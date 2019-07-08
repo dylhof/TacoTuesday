@@ -3,10 +3,6 @@ import {withRouter} from 'react-router-dom';
 import * as title from '../../titles';
 
 export class Title extends Component{
-  constructor(props) {
-    super(props)
-  }
-
   findTitle = () => {
     switch (this.props.location.pathname) {
       case '/':
